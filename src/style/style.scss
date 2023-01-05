@@ -1,0 +1,518 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Rubik:wght@400;500&family=Ubuntu:wght@400;500;700&display=swap");
+$gray: hsl(231, 11%, 63%);
+$blue: hsl(243, 100%, 62%);
+$Darkblue: hsl(213, 96%, 18%);
+$red: #c94451;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+///////////// All page size and container
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.Container {
+  min-width: 940px;
+  height: 600px;
+  background-color: hsl(0, 0%, 100%);
+  margin: auto;
+  padding: 16px 15px 15px 15px;
+  border-radius: 1rem;
+  display: flex;
+  box-shadow: 0 5px 10px #d6d9e6;
+}
+.content {
+  min-width: 55%;
+  margin: auto;
+  height: 100%;
+  position: relative;
+  padding-top: 30px;
+}
+//////////// Steps section
+.Steps {
+  background: url("/src/assets/images/bg-sidebar-desktop.svg") no-repeat;
+  background-size: contain;
+  width: 30%;
+  height: 100%;
+  padding-top: 10px;
+  border-radius: 1rem;
+}
+.Step {
+  display: flex;
+  margin: 30px 40px;
+  .stepNumber {
+    margin-right: 15px;
+    padding: 10px 15px;
+    background-color: $blue;
+    color: white;
+    border-radius: 100%;
+    font-weight: 500;
+    border: white 1px solid;
+    font-weight: 700;
+  }
+  .active {
+    background-color: hsl(206, 94%, 87%);
+    color: $Darkblue;
+    border-color: hsl(206, 94%, 87%);
+  }
+  .stepInfo {
+    span {
+      color: hsl(228, 100%, 84%);
+      font-size: 14px;
+    }
+    p {
+      font-weight: 500;
+      font-size: 16px;
+      letter-spacing: 1px;
+      color: white;
+    }
+  }
+}
+
+//////////Navigation/////
+.navigation {
+  width: 100%;
+  position: absolute;
+  bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  button {
+    padding: 15px 25px;
+    font-weight: 700;
+    font-size: 16px;
+  }
+  .btn1 {
+    background-color: transparent;
+    border: none;
+    color: $gray;
+  }
+  .btn2 {
+    background-color: #174a89;
+    border: none;
+    color: white;
+    border-radius: 10px;
+  }
+}
+//////Personal info
+h2 {
+  font-size: 32px;
+  margin: 15px 0;
+  color: $Darkblue;
+}
+p {
+  font-size: 16px;
+  color: $gray;
+}
+
+.info {
+  .form {
+    margin-top: 30px;
+    .fields {
+      margin-top: 25px;
+      input {
+        width: 100%;
+        font-size: 16px;
+        padding: 15px;
+        border-radius: 8px;
+        border: hsl(229, 24%, 87%) 1px solid;
+        margin-top: 10px;
+        outline: none;
+        color: $Darkblue;
+        font-weight: 500;
+        &:focus {
+          border-color: $blue;
+        }
+        &::placeholder {
+          color: $gray;
+        }
+      }
+      .erorr {
+        border-color: $red;
+      }
+      label {
+        color: $Darkblue;
+      }
+      span {
+        color: $red;
+      }
+    }
+  }
+}
+.dflex {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 500;
+}
+////////Add-ons//////////
+.packs{
+  margin-top: 40px;
+}
+.pack {
+  margin-bottom:15px;
+  align-items: center;
+  border: hsl(229, 24%, 87%) 1px solid;
+  padding: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  .dflex{
+    display: flex;
+    align-items: center;
+  }
+  .title {
+    padding-left: 20px;
+    h3{
+      font-size: 18px;
+      color: #174a89;
+      user-select: none;
+    }
+    p{
+      padding-left:2px;
+      font-weight: 400;
+      font-size: 16px;
+      padding-top: 5px;
+      user-select: none;
+    }
+  }
+  span{
+    font-size: 18px;
+    color: $blue;
+    user-select: none;
+  }
+
+input[type=checkbox]{
+  cursor: pointer;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border: hsl(229, 24%, 87%) 1px solid;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+
+}
+input[type=checkbox]:after{
+content: url(../assets/images/icon-checkmark.svg);
+display: none;
+}
+input[type=checkbox]:checked{
+  background-color: $blue;
+}
+input[type=checkbox]:checked::after{
+  display: block;
+}}
+////////thanks///////////
+.thanks {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  h2 {
+    font-size: 32px;
+    margin: 15px 0;
+    color: $Darkblue;
+    font-weight: 700;
+  }
+  p {
+    font-size: 16px;
+    color: $gray;
+    padding: 0 20px;
+    line-height: 23px;
+  }
+}
+/////////Finish/////////
+
+.payout{
+  padding: 20px 25px;
+  background-color: #eef5ff;
+  border-radius: 10px;
+  margin-top: 40px;
+  .title{
+    align-items: center;
+    padding-bottom: 25px;
+    border-bottom: hsl(229, 24%, 87%) 1px solid;
+    h3{
+      color: #174a89;
+    }
+    span{
+      color: #174a89;
+      font-size: 16px;
+      font-weight: 700;
+    }
+    p{
+      text-decoration: underline;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+  }
+}
+.addFinish{
+  padding-top: 20px;
+  p{
+    font-weight: 400;
+  }
+    span{
+      color: #174a89;
+    }
+}
+.total{
+  padding: 20px 25px;
+  p{
+    font-weight: 400;
+    font-size: 15px;
+  }
+    span{
+      color: $blue;
+      font-weight: 700;
+      font-size: 20px;
+    }
+}
+/////////Plan///////////
+.Plan{
+  width: 100%;
+
+.switch{
+  width: 100%;
+  background-color: #eef5ff;
+  border-radius: 10px;
+  padding: 15px 0;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  input{
+    margin: 0px 20px;
+  }
+  input[type=checkbox]{
+    cursor: pointer;
+    appearance: none;
+    width: 45px;
+    height: 25px;
+    border-radius: 30px;
+    display: inline-flex;
+    align-items: center;
+    background-color: $Darkblue;
+    padding:5px;
+  
+  }
+  input[type=checkbox]:after{
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: white;
+  }
+  input[type=checkbox]:checked{
+    background-color: $Darkblue;
+    justify-content: right;
+  }
+  input[type=checkbox]:checked::after{
+    justify-content: left;
+    
+  }
+}
+  span{
+    font-weight: 700;
+    color: $gray;
+  }
+
+}
+.plansCrads{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap:20px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+.planCard{
+  padding: 20px 15px;
+  border: hsl(229, 24%, 87%) 1px solid;
+  border-radius: 10px;
+  .title{
+    margin-top: 40px;
+    h3{
+      font-size: 18px;
+      color: #174a89;
+    }
+    p{
+      margin-top: 10px;
+      font-size: 14px;
+    }
+  }
+}
+/////////Mobile//////////
+@media (max-width: 768px) {
+  main {
+    width: 100%;
+    height: auto;
+  }
+  .Container {
+    min-width: 100%;
+    height: auto;
+    background-color: #eef5ff;
+    margin: auto;
+    padding: 0px;
+    border-radius: 0;
+    display: block;
+  }
+  .Steps {
+    background: url("/src/assets/images/bg-sidebar-mobile.svg") no-repeat;
+    width: 100%;
+    background-size: cover;
+    height: 200px;
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+    border-radius: 0;
+    .Step {
+      margin: 30px 0px;
+      display: block;
+      .stepNumber {
+        margin-right: 5vw;
+        padding: 8px 13px;
+      }
+    }
+  }
+  .stepInfo {
+    display: none;
+  }
+  .content {
+    border-radius: 10px;
+    padding-bottom: 100px;
+    margin-top: -110px;
+    
+  }
+  .info {
+    padding-bottom:100px;
+    max-width: 90%;
+    margin: auto;
+    padding: 5%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px #d6d9e6;
+    p {
+      font-size: 16px;
+      line-height: 25px;
+      font-weight: 500;
+    }
+    h2 {
+      font-size: 28px;
+    }
+    .form {
+      margin-top: 20px;
+      padding-bottom: 15px;
+      .fields {
+        margin-top: 20px;
+        input {
+          font-size: 16px;
+          padding: 10px 15px;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+  .navigation {
+    width: 100%;
+    margin: auto;
+    background-color: white;
+    padding: 3% 20px;
+    bottom: 0px;
+    position: fixed;
+    button {
+      font-size: 14px;
+    }
+  }
+  .thanks {
+    padding: 75px 0;
+    max-width: 90%;
+    margin: auto;
+    background-color: white;
+    position: relative;
+    margin-top: -0px;
+    border-radius: 10px;
+    top: auto;
+    transform: initial;
+    box-shadow: 0 5px 10px #d6d9e6;
+  }
+  .packs{
+    margin-top: 25px;
+  }
+  .pack{
+    padding: 15px;
+    span{
+      font-size: 14px;
+    }
+    .title{
+      padding-left: 15px;
+      p{
+        font-size: 13px;
+        line-height: 15px;
+        padding-left: 0;
+      }
+      h3{
+        font-size: 15px;
+      }
+    }
+    input[type=checkbox]{
+      height: 20px;
+      width: 20px;
+    }
+  }
+  .total{
+    padding: 20px 25px 10px 25px;
+      span{
+        font-size: 18px;
+      }
+  }
+  .plansCrads{
+    display: block;
+  }
+  .planCard{
+    display: flex;
+    padding: 20px 15px;
+    border: hsl(229, 24%, 87%) 1px solid;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    .title{
+      margin-top: 0px;
+      margin-left: 15px;
+      h3{
+        font-size: 18px;
+        color: #174a89;
+      }
+      p{
+        margin-top:0px;
+        font-size: 16px;
+      }
+    }
+  }
+}
+/////////S Screen//////////
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    background-color: rgb(234, 255, 0);
+  }
+}
+/////////Normal Screen//////////
+@media (min-width: 1025px) and (max-width: 1200px) {
+  body {
+    background-color: rgb(102, 255, 0);
+  }
+}
+/////////L Screen //////////
+@media (min-width: 1201px) {
+  body {
+    background-color: rgb(255, 0, 140);
+  }
+  .content {
+    min-width: 50%;
+  }
+}
