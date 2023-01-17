@@ -9,6 +9,9 @@ $red: #c94451;
   box-sizing: border-box;
   font-family: "Ubuntu", sans-serif;
 }
+body{
+  background-color: #eef5ff;
+}
 ///////////// All page size and container
 main {
   width: 100%;
@@ -81,6 +84,7 @@ main {
   bottom: 15px;
   display: flex;
   justify-content: space-between;
+  
   button {
     padding: 15px 25px;
     font-weight: 700;
@@ -91,12 +95,18 @@ main {
     border: none;
     color: $gray;
   }
+
   .btn2 {
     background-color: #174a89;
     border: none;
     color: white;
     border-radius: 10px;
+    
+    
   }
+}
+.btnRight{
+  justify-content: right !important;
 }
 //////Personal info
 h2 {
@@ -160,6 +170,9 @@ p {
   padding: 20px;
   border-radius: 8px;
   cursor: pointer;
+  &:hover{
+    border: $blue 1px solid !important;
+  }
   .dflex{
     display: flex;
     align-items: center;
@@ -251,6 +264,7 @@ input[type=checkbox]:checked::after{
       text-decoration: underline;
       font-size: 14px;
       margin-top: 10px;
+      cursor: pointer;
     }
   }
 }
@@ -258,6 +272,7 @@ input[type=checkbox]:checked::after{
   padding-top: 20px;
   p{
     font-weight: 400;
+    
   }
     span{
       color: #174a89;
@@ -323,6 +338,9 @@ input[type=checkbox]:checked::after{
     font-weight: 700;
     color: $gray;
   }
+  .switOn{
+    color:#174a89;
+  }
 
 }
 .plansCrads{
@@ -332,10 +350,18 @@ input[type=checkbox]:checked::after{
   margin-top: 40px;
   margin-bottom: 30px;
 }
+.planClick{
+  border: $blue 1px solid !important;
+  background-color: #F8F9FE;
+}
 .planCard{
   padding: 20px 15px;
   border: hsl(229, 24%, 87%) 1px solid;
   border-radius: 10px;
+  &:hover{
+    border: $blue 1px solid !important;
+  }
+  cursor: pointer;
   .title{
     margin-top: 40px;
     h3{
@@ -495,23 +521,8 @@ input[type=checkbox]:checked::after{
     }
   }
 }
-/////////S Screen//////////
-@media (min-width: 768px) and (max-width: 1024px) {
-  body {
-    background-color: rgb(234, 255, 0);
-  }
-}
-/////////Normal Screen//////////
-@media (min-width: 1025px) and (max-width: 1200px) {
-  body {
-    background-color: rgb(102, 255, 0);
-  }
-}
 /////////L Screen //////////
 @media (min-width: 1201px) {
-  body {
-    background-color: rgb(255, 0, 140);
-  }
   .content {
     min-width: 50%;
   }

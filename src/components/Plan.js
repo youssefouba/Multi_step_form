@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Plan = ({img,title,price,switchOff}) => {
+const Plan = ({img,title,price,switchOff,selected}) => {
   return (
-    <div className='planCard'>
+    <div className={selected?'planCard planClick':'planCard'}>
         <img src={img} alt="Arcade" />
         <div className='title'>
             <h3>{title}</h3>

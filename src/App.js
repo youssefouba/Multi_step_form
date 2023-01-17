@@ -6,8 +6,10 @@ import AddonsStep from "./components/AddonsStep"
 import Finishing from "./components/Finishing";
 import PlanStep from "./components/PlanStep"
 import { useState } from "react";
+import { useSelector } from "react-redux";
 function App() {
-  const [page,setPage]=useState(0);
+  
+  const page=useSelector((e)=>e.page.value)
   const PageDisplay=()=>{
     switch(page){
       case 0:

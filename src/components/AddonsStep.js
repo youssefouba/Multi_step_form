@@ -1,15 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Pack from "./Pack";
+import { useDispatch } from "react-redux";
+import user, { info } from "../features/user";
+import { useSelector } from "react-redux";
+
 
 const AddonsStep = () => {
+  const dispatch=useDispatch();
+  const user=useSelector((e)=>e.user.value)
+  const [paks, setPaks] = useState(user.packs);
+  const chengeClick = title => {
+    console.log(paks);
+    setPaks(paks.map(e => (e.title === title ? { ...e, addon: !e.addon } : e)));
+  };
+
+  useEffect(()=>{
+    paks.map((e)=>{
+        dispatch(info({...user,packs:paks}));
+    })
+  },[paks])
+
   return (
     <div className="addons info">
       <h2>Pick add-ons</h2>
       <p>Add-ons help enhance your gaming experience.</p>
       <div className="packs">
-        <Pack title="Online service" text="Access to multiplayer games" price="10" add="onlineService"/>
-        <Pack title="Larger storage" text="Extra 1TB of cloud save" price="20"/>
-        <Pack title="Customizable profile" text="Custom theme on your profile" price="20"/>
+        {paks.map((e, i) => (
+          <Pack key={i} packs={e} chengeClick={chengeClick} />
+        ))}
       </div>
     </div>
   );

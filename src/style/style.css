@@ -7,6 +7,10 @@
   font-family: "Ubuntu", sans-serif;
 }
 
+body {
+  background-color: #eef5ff;
+}
+
 main {
   width: 100%;
   height: 100vh;
@@ -116,6 +120,12 @@ main {
   border-radius: 10px;
 }
 
+.btnRight {
+  -webkit-box-pack: right !important;
+      -ms-flex-pack: right !important;
+          justify-content: right !important;
+}
+
 h2 {
   font-size: 32px;
   margin: 15px 0;
@@ -203,6 +213,10 @@ p {
   padding: 20px;
   border-radius: 8px;
   cursor: pointer;
+}
+
+.pack:hover {
+  border: #473dff 1px solid !important;
 }
 
 .pack .dflex {
@@ -331,6 +345,7 @@ p {
   text-decoration: underline;
   font-size: 14px;
   margin-top: 10px;
+  cursor: pointer;
 }
 
 .addFinish {
@@ -429,6 +444,10 @@ p {
   color: #9699ab;
 }
 
+.Plan .switOn {
+  color: #174a89;
+}
+
 .plansCrads {
   display: -ms-grid;
   display: grid;
@@ -439,10 +458,20 @@ p {
   margin-bottom: 30px;
 }
 
+.planClick {
+  border: #473dff 1px solid !important;
+  background-color: #F8F9FE;
+}
+
 .planCard {
   padding: 20px 15px;
   border: #d6d9e6 1px solid;
   border-radius: 10px;
+  cursor: pointer;
+}
+
+.planCard:hover {
+  border: #473dff 1px solid !important;
 }
 
 .planCard .title {
@@ -614,22 +643,7 @@ p {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-  body {
-    background-color: #eaff00;
-  }
-}
-
-@media (min-width: 1025px) and (max-width: 1200px) {
-  body {
-    background-color: #66ff00;
-  }
-}
-
 @media (min-width: 1201px) {
-  body {
-    background-color: #ff008c;
-  }
   .content {
     min-width: 50%;
   }
